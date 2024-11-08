@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Form Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to My Flask App!</h1>
+        <p>Fill in the form to see your personalized result:</p>
+
+        <form action="/result" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="color">Favorite Color:</label>
+            <input type="text" id="color" name="color" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
